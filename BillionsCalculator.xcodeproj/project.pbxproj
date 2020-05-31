@@ -16,6 +16,8 @@
 		5C93CCD324842C26002F6D3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C93CCD124842C26002F6D3F /* LaunchScreen.storyboard */; };
 		5C93CCDE24842C26002F6D3F /* BillionsCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C93CCDD24842C26002F6D3F /* BillionsCalculatorTests.swift */; };
 		5C93CCE924842C26002F6D3F /* BillionsCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C93CCE824842C26002F6D3F /* BillionsCalculatorUITests.swift */; };
+		5C93CCF724847358002F6D3F /* Denominations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C93CCF624847358002F6D3F /* Denominations.swift */; };
+		5C93CCF9248474A3002F6D3F /* TimeSpans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C93CCF8248474A3002F6D3F /* TimeSpans.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		5C93CCE424842C26002F6D3F /* BillionsCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BillionsCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C93CCE824842C26002F6D3F /* BillionsCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillionsCalculatorUITests.swift; sourceTree = "<group>"; };
 		5C93CCEA24842C26002F6D3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C93CCF624847358002F6D3F /* Denominations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Denominations.swift; sourceTree = "<group>"; };
+		5C93CCF8248474A3002F6D3F /* TimeSpans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSpans.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 				5C93CCD424842C26002F6D3F /* Info.plist */,
 				5C93CCC724842C25002F6D3F /* BillionsCalculator.xcdatamodeld */,
 				5C93CCCE24842C26002F6D3F /* Preview Content */,
+				5C93CCF624847358002F6D3F /* Denominations.swift */,
+				5C93CCF8248474A3002F6D3F /* TimeSpans.swift */,
 			);
 			path = BillionsCalculator;
 			sourceTree = "<group>";
@@ -270,7 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C93CCF724847358002F6D3F /* Denominations.swift in Sources */,
 				5C93CCC424842C25002F6D3F /* AppDelegate.swift in Sources */,
+				5C93CCF9248474A3002F6D3F /* TimeSpans.swift in Sources */,
 				5C93CCC924842C25002F6D3F /* BillionsCalculator.xcdatamodeld in Sources */,
 				5C93CCCB24842C25002F6D3F /* ContentView.swift in Sources */,
 				5C93CCC624842C25002F6D3F /* SceneDelegate.swift in Sources */,
