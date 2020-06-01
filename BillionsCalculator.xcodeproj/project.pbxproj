@@ -18,6 +18,7 @@
 		5C93CCE924842C26002F6D3F /* BillionsCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C93CCE824842C26002F6D3F /* BillionsCalculatorUITests.swift */; };
 		5C93CCF724847358002F6D3F /* Denominations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C93CCF624847358002F6D3F /* Denominations.swift */; };
 		5C93CCF9248474A3002F6D3F /* TimeSpans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C93CCF8248474A3002F6D3F /* TimeSpans.swift */; };
+		5C93CCFB24848206002F6D3F /* TextBindingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C93CCFA24848206002F6D3F /* TextBindingManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		5C93CCEA24842C26002F6D3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C93CCF624847358002F6D3F /* Denominations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Denominations.swift; sourceTree = "<group>"; };
 		5C93CCF8248474A3002F6D3F /* TimeSpans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSpans.swift; sourceTree = "<group>"; };
+		5C93CCFA24848206002F6D3F /* TextBindingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBindingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				5C93CCCE24842C26002F6D3F /* Preview Content */,
 				5C93CCF624847358002F6D3F /* Denominations.swift */,
 				5C93CCF8248474A3002F6D3F /* TimeSpans.swift */,
+				5C93CCFA24848206002F6D3F /* TextBindingManager.swift */,
 			);
 			path = BillionsCalculator;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C93CCF724847358002F6D3F /* Denominations.swift in Sources */,
+				5C93CCFB24848206002F6D3F /* TextBindingManager.swift in Sources */,
 				5C93CCC424842C25002F6D3F /* AppDelegate.swift in Sources */,
 				5C93CCF9248474A3002F6D3F /* TimeSpans.swift in Sources */,
 				5C93CCC924842C25002F6D3F /* BillionsCalculator.xcdatamodeld in Sources */,
