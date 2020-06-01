@@ -8,9 +8,9 @@
 
 import Foundation
 
-enum Denominations {
-    case Billion
-    case Million
-    case Thousand
-    case Hundred
-}
+//enum Denominations {
+//     Billion,
+//     Million,
+//     Thousand,
+//     Hundred
+//}

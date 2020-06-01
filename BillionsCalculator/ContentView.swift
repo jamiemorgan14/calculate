@@ -10,65 +10,53 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var income = ""
-    @State var endDollarValue = ""
+    private var currencyFormatter: NumberFormatter {
+        let formatter = NumberFormatter()
+        formatter.maximumFractionDigits = 0
+        formatter.isLenient = true
+        formatter.numberStyle = .currency
+        return formatter
+    }
+
+    @State var endDollarValue: Double = 1000000000
+    
+    // TimeSpanPicker
     @State var timeWorkedFor = ""
     @State var timeSpanSelection = 0
+    
+    // DollarValuePicker
     @State var dollarValueSelection = 0
+    @State var income = ""
     
-    @ObservedObject var textBindingManager = TextBindingManager(limit: 3)
+    // SalaryPerPicker
+    @State var earningPeriodSelection = 0
     
-    let timeSpans = ["Milleniums", "Centuries", "Decades", "Years", "Months", "Days", "Hours", "Minutes", "Seconds"]
-    let dollarValues = ["Billion", "Million", "Thousand", "Hundred"]
     
     var body: some View {
         
         VStack {
-            Text("I would have to work for")
-            HStack {
-                TextField(timeSpans[timeSpanSelection], text: $timeWorkedFor)
-                    .keyboardType(.numberPad)
-                    .multilineTextAlignment(.center)
-                    .frame(width: 70)
-                Picker(selection: $timeSpanSelection, label: Text("")) {
-                    ForEach(0 ..< timeSpans.count) {
-                        Text(self.timeSpans[$0]).tag($0)
-                    }
-                }
-                .frame(minWidth: 0, maxWidth: 150, maxHeight: 100)
-                .clipped()
-                .labelsHidden()
-            }
-            Text("While making...")
-            HStack {
-                TextField(dollarValues[dollarValueSelection], text: $textBindingManager.income) {
-                    self.income = self.textBindingManager.income
-                }
-                .keyboardType(.numberPad)
-                .multilineTextAlignment(.center)
-                .frame(width: 70)
-                Picker(selection: $dollarValueSelection, label: Text("")) {
-                    ForEach(0 ..< dollarValues.count) {
-                        Text(self.dollarValues[$0]).tag($0)
-                    }
-                }
-                .frame(minWidth: 0, maxWidth: 150, maxHeight: 100)
-                .clipped()
-                .labelsHidden()
-            }
-            Text("Per Year")
-            Text("to earn")
-            TextField("Dollars", text: $endDollarValue) {
+            Text("To Earn")
+            TextField("To Earn", value: $endDollarValue, formatter: currencyFormatter) {
                 self.submit()
-            }.keyboardType(.numberPad)
+            }.keyboardType(.decimalPad)
                 .multilineTextAlignment(.center)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+            
+            TimeSpanPicker(timeSpanSelection: $timeSpanSelection, timeWorkedFor: $timeWorkedFor)
+            
+            Text("While making...")
+            DollarValuePicker(dollarValueSelection: $dollarValueSelection, income: $income)
+            
+            EarningPeriodsPicker(earningPeriodSelection: $earningPeriodSelection)
         }
     }
     
     func submit() {
-        //    totalTime = String(Int(endDollarValue)! / Int(income)!)
-        //    print()
+//            totalTime = String(Int(endDollarValue)! / Int(income)!)
+            print(endDollarValue)
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
